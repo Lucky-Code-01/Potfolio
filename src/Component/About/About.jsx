@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import about from '../Image/Other/aboutme.png';
-import study from '../Image/Other/study.png';
+import study from '../Image/Other/Study.png';
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { useRef } from 'react';
 
