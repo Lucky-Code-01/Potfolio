@@ -1,0 +1,119 @@
+.main-box{
+    display:inline-flex;
+    align-items: center;
+}
+
+.static-text{
+    font-size: 50px;
+    color: white;
+}
+
+.link-div{
+    margin-left: 15px;
+    height: 70px;
+    line-height: 70px;
+    overflow: hidden;
+}
+
+.link-div li{
+    position: relative;
+    list-style: none;
+    font-size: 50px;
+    color: #13ae75;
+    font-weight: 600;
+    top: 0;
+    animation: slide 6s steps(4) infinite;
+}
+
+/* @keyframes slide {
+    100%{
+        top:-280px;
+    }
+} */
+
+.link-box li span{
+    position: relative;
+}
+
+.link-div li span::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-color: #0F172A;
+    animation : typing 1.5s steps(12) infinite;
+}
+
+/* @keyframes typing {
+    100%{
+        left:100%;
+        margin : 0px -35px 0px 35px;
+    }
+} */
+
+
+/* media quaery */
+@media (max-width:1024px){
+    .static-text{
+        font-size: 30px;
+    }
+    .link-div{
+        height: 45px;
+        line-height: 45px;
+       
+    }
+
+    .link-div li{
+        font-size: 30px;
+        animation: slide 6s steps(4) infinite;
+    }
+
+    @keyframes slide {
+        100%{
+            top:-180px;
+        }
+    }
+}
+
+@media (min-width: 1028px) and (max-width:1160px){
+    .static-text{
+        font-size: 40px;
+    }
+    
+    .link-div{
+        height: 60px;
+        line-height: 60px;  
+    }
+
+    .link-div li{
+        font-size: 40px;
+    }
+
+    @keyframes slide {
+        100%{
+            top:-240px;
+        }
+    }
+}
+
+@media (max-width:420px){
+    .static-text{
+        font-size: 22px;
+    }
+    
+    .link-div{
+        height: 30px;
+        line-height: 30px;  
+    }
+
+    .link-div li{
+        font-size: 22px;
+    }
+
+    @keyframes slide {
+        100%{
+            top:-120px;
+        }
+    }
+}
