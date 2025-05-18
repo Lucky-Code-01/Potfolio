@@ -25,11 +25,11 @@
     animation: slide 6s steps(4) infinite;
 }
 
-/* @keyframes slide {
+@keyframes slide {
     100%{
         top:-280px;
     }
-} */
+}
 
 .link-box li span{
     position: relative;
@@ -45,12 +45,12 @@
     animation : typing 1.5s steps(12) infinite;
 }
 
-/* @keyframes typing {
+@keyframes typing {
     100%{
         left:100%;
         margin : 0px -35px 0px 35px;
     }
-} */
+}
 
 
 /* media quaery */
