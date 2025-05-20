@@ -92,7 +92,7 @@ function Contact() {
           }}
           >
             <MdEmail className='text-xl text-blue-500' />
-            <h1 className='text-base text-gray-400 font-semibold'>example@gmail.com</h1>
+            <h1 className='text-base text-gray-400 font-semibold'>  Laxmanbaisoya004@gmail.com</h1>
           </motion.div>
           <motion.div 
           className='flex items-center gap-2 cursor-pointer'
@@ -105,7 +105,7 @@ function Contact() {
             <h1 className='text-base text-gray-400 font-semibold'>example@gmail.com</h1>
           </motion.div>
           <div className='flex gap-4 items-center mt-4'>
-            <FaGithub className='text-2xl cursor-pointer text-blue-400' />
+            <a href="https://github.com/Lucky-Code-01" target='_black' rel="noopener noreferrer"><FaGithub className='text-2xl cursor-pointer text-blue-400' /></a>
             <FaLinkedin className='text-2xl cursor-pointer text-blue-400' />
             <FaInstagram className='text-2xl cursor-pointer text-blue-400' />
           </div>
@@ -120,6 +120,7 @@ function Contact() {
         >
           <p className='text-white font-semibold text-sm sm:text-base'>
             Whether you're building a new website, improving your existing platform, or have a unique idea — I'm here to help.
+            Also Connect With Gmail..!
           </p>
 
           {/* Form */}

@@ -1,11 +1,12 @@
 import { motion, useMotionValue, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import './Hero.css'
+import userImage from '../Image/MyPhoto/laxman.jpg';
 export default function Hero() {
   const currentDiv = useRef(null);
-
+  const [imageStatus,setImageStatus] = useState(false);
   // live value
   const userX = useMotionValue(0);
   const userY = useMotionValue(0);
@@ -26,6 +27,10 @@ export default function Hero() {
     userY.set(150);
   };
 
+  const handleImage = ()=>{
+    setImageStatus(!imageStatus);
+  }
+
   return (
     <div className='w-full min-h-full p-2 flex flex-col items-center gap-4 lg:flex lg:flex-row lg:justify-center lg:items-center lg:gap-10 overflow-hidden' id="home">
       {/* image section  */}
@@ -43,9 +48,10 @@ export default function Hero() {
         transition={{ duration: 1, ease: "easeOut" }}
       >
         <motion.img
-          src={"https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100221.jpg?ga=GA1.1.1347283698.1647342753&semt=ais_hybrid&w=740"}
+          src={imageStatus?userImage:"https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100221.jpg?ga=GA1.1.1347283698.1647342753&semt=ais_hybrid&w=740"}
           alt=""
           className='w-full h-full rounded shadow-lg object-cover'
+          onDoubleClick={handleImage}
         />
       </motion.div>
       {/* text section */}
@@ -69,7 +75,7 @@ export default function Hero() {
         <div className='flex flex-col gap-3'>
           <p className='text-lg font-semibold'>I’m a passionate Full Stack Developer with a Bachelor’s degree in Computer Applications (BCA) from IGNOU. I love building modern, scalable web applications that solve real-world problems. From creating responsive frontends to managing robust backends, I enjoy working across the full development stack. Let's build something amazing together.</p>
           <div className='flex gap-5 items-center'>
-            <div><FaGithub className='text-2xl cursor-pointer text-emerald-400' /></div>
+            <div><a href="https://github.com/Lucky-Code-01" target='_black' rel="noopener noreferrer"><FaGithub className='text-2xl cursor-pointer text-emerald-400' /></a></div>
             <div><FaLinkedin className='text-2xl cursor-pointer text-emerald-400' /></div>
             <div><FaInstagram className='text-2xl cursor-pointer text-emerald-400' /></div>
           </div>
