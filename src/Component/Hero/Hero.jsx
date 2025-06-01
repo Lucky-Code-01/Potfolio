@@ -3,7 +3,7 @@ import { useRef, useState } from 'react'
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import './Hero.css'
-import userImage from '../Image/MyPhoto/laxman.jpg';
+import userImage from '../Image/MyPhoto/laxman.jpg'; 
 export default function Hero() {
   const currentDiv = useRef(null);
   const [imageStatus,setImageStatus] = useState(false);
